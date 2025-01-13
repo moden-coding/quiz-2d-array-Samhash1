@@ -57,7 +57,23 @@ public class App {
 
 
     public static int columnRowAddition(int[][] arr, int row, int col){
+       
+        int sum = 0;
         
-        return -1;//placeholder
+		if (row <= 2 && row >= 0 && col <= 2 && col >= 0 ){
+        for (int i = 0; i < arr[row].length; i++) {
+			sum = arr[row][i] + sum;
+		}
+       
+		for (int i = 0; i < arr.length; i++) {
+			sum = arr[i][col] + sum;
+        
+		}
+        
+     return sum;
+    } else{
+        return -1;
     }
+    
+}
 }
